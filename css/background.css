@@ -55,6 +55,29 @@
     rgba(109, 186, 130, 0.1) 100%
   );
 }
+.full_page{
+  z-index: 1;
+}
 #footer {
 	background: rgba(0, 0, 0, .1);
+}
+.floating-image {
+  position: fixed;
+  bottom: 20px; /* 距离底部的距离 */
+  right: 30px; /* 距离右侧的距离 */
+  width: 100px; /* 图片宽度 */
+  height: auto; /* 自动调整高度以保持纵横比 */
+  z-index: 0; /* 确保图片位于其他内容上方 */
+  transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.floating-image img {
+  max-width: 100%; /* 图片不超出容器宽度 */
+  height: auto; /* 自动调整高度以保持纵横比 */
+
+}
+
+/* 鼠标悬停时缩小图片 */
+.floating-image:hover {
+  transform: scale(0.9); /* 可根据需要调整缩放比例 */
 }
